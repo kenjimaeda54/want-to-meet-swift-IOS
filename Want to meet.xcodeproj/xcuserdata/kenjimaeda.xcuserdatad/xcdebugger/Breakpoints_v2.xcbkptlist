@@ -7,23 +7,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "064E6945-1260-4545-BC9A-0D667FA6337B"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Want to meet/Controllers/PlaceFinderViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
-            landmarkName = "findCity(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "407F3BFB-1B03-43B3-AF1D-4F15310A0DDA"
+            uuid = "B0118942-49CF-4A91-8E0D-454FD946F223"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -33,6 +17,182 @@
             startingLineNumber = "48"
             endingLineNumber = "48"
             landmarkName = "findCity(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "08CD6C1E-900E-4704-B0F5-1D20B16FB856"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Want to meet/Controllers/PlaceFinderViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "findCity(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "83726D0C-F201-4D46-A5C7-026E4111362C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Want to meet/Models/Place.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "getRegion(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "83726D0C-F201-4D46-A5C7-026E4111362C - cecc7d885e641e5f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Want_to_meet.Place.getRegion(Swift.Optional&lt;__C.CLPlacemark&gt;) -&gt; (regionCordinate: Swift.Optional&lt;__C.MKCoordinateRegion&gt;, name: Swift.Optional&lt;Swift.String&gt;)"
+                  moduleName = "Want to meet"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kenjimaeda/Documents/projects_IOS/Want%20to%20meet/Want%20to%20meet/Models/Place.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "428">
+               </Location>
+               <Location
+                  uuid = "83726D0C-F201-4D46-A5C7-026E4111362C - cecc7d885e641e5f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Want_to_meet.Place.getRegion(Swift.Optional&lt;__C.CLPlacemark&gt;) -&gt; (regionCordinate: Swift.Optional&lt;__C.MKCoordinateRegion&gt;, name: Swift.Optional&lt;Swift.String&gt;)"
+                  moduleName = "Want to meet"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kenjimaeda/Documents/projects_IOS/Want%20to%20meet/Want%20to%20meet/Models/Place.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "476">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "475277C7-F9A2-455A-91EB-CA5A65997FDA"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Want to meet/Models/Place.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "getRegion(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "475277C7-F9A2-455A-91EB-CA5A65997FDA - cecc7d885e641fe3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Want_to_meet.Place.getRegion(Swift.Optional&lt;__C.CLPlacemark&gt;) -&gt; (regionCordinate: Swift.Optional&lt;__C.MKCoordinateRegion&gt;, name: Swift.Optional&lt;Swift.String&gt;)"
+                  moduleName = "Want to meet"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kenjimaeda/Documents/projects_IOS/Want%20to%20meet/Want%20to%20meet/Models/Place.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "62"
+                  endingLineNumber = "62"
+                  offsetFromSymbolStart = "72">
+               </Location>
+               <Location
+                  uuid = "475277C7-F9A2-455A-91EB-CA5A65997FDA - cecc7d885e641fe3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Want_to_meet.Place.getRegion(Swift.Optional&lt;__C.CLPlacemark&gt;) -&gt; (regionCordinate: Swift.Optional&lt;__C.MKCoordinateRegion&gt;, name: Swift.Optional&lt;Swift.String&gt;)"
+                  moduleName = "Want to meet"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kenjimaeda/Documents/projects_IOS/Want%20to%20meet/Want%20to%20meet/Models/Place.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "62"
+                  endingLineNumber = "62"
+                  offsetFromSymbolStart = "100">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "29E5218E-B89C-4CAC-8ECB-0DDF51DBE63E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Want to meet/Models/Place.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "getRegion(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "539B9B54-FB11-4380-9D3E-043182BB95B5"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Want to meet/Controllers/PlaceFinderViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "findCity(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9367E855-0463-4271-85BE-DEC4C20C1525"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Want to meet/Models/Place.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "showMessage(typeMessage:viewControler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A5D635C7-1BFE-4103-B894-3D2726B3FDB0"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Want to meet/Models/Place.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
+            landmarkName = "showMessage(typeMessage:viewControler:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

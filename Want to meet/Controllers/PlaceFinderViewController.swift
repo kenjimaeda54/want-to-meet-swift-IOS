@@ -16,6 +16,7 @@ class PlaceFinderViewController: UIViewController {
 	@IBOutlet weak var btnSearch: UIButton!
 	@IBOutlet weak var tfSearchCity: UITextField!
 	
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		title = "Want to meet"
@@ -44,12 +45,15 @@ class PlaceFinderViewController: UIViewController {
 			//geocoder adressString
 			geocoder.geocodeAddressString(address) { (placeMark,error) in
 				self.showLoading(false)
-				if let place = placeMark?.first{
-					let adress =  Place.formaterAdress(place)
-					print(adress)
+				if error == nil {
+					if let region = Place.getRegion(placeMark?.first).regionCordinate, let name = Place.getRegion(placeMark?.first).name{
+						self.mkMapKit.setRegion(region, animated: true)
+						Place.showMessage(typeMessage: .name(name), viewControler: self)
+						return
+					}
 				}
+				Place.showMessage(typeMessage: .error("Don't worked,please try again"), viewControler: self)
 			}
 		}
 	}
-	
 }

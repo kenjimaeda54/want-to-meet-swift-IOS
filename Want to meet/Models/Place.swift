@@ -7,8 +7,12 @@
 
 import Foundation
 import CoreLocation
+import MapKit
 
-
+enum PlaceFinderMessageType {
+	case name(String)
+	case error(String)
+}
 
 
 struct Place {
@@ -52,6 +56,47 @@ struct Place {
 			adress += "\n\(country)" // pais
 		}
 		return adress
+	}
+	
+static	func getRegion(_ placeMark: CLPlacemark?) -> (regionCordinate:MKCoordinateRegion?,name:String?) {
+		if let placeMark = placeMark, let coordinate = placeMark.location?.coordinate {
+			
+			//quanto maior a distancia maior fica visualizacao do mapa
+			let regionCordinate = MKCoordinateRegion(center: coordinate, latitudinalMeters: 2500, longitudinalMeters: 2500)
+			let name = placeMark.name
+			return (regionCordinate,name)
+		}
+		
+		return (nil,nil)
+	}
+	
+static	func showMessage(typeMessage type:PlaceFinderMessageType, viewControler: UIViewController) {
+		var title: String
+		var message: String
+		var hasConfirmation: Bool = false
+		
+		switch type {
+		case .name(let name):
+			title = "Find location"
+			message = "You would like add \(name)"
+			hasConfirmation = true
+		case .error(let error):
+			title = "Error"
+			message = error
+			
+		}
+		
+		let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+		let cancel = UIAlertAction(title: "Cancel", style: .cancel)
+		alert.addAction(cancel)
+		
+		if hasConfirmation {
+			let confirm = UIAlertAction(title: "Confirm", style: .default) { (action) in
+				print("ok")
+			}
+			alert.addAction(confirm)
+		}
+		viewControler.present(alert, animated: true,completion: nil)
 	}
 	
 }
