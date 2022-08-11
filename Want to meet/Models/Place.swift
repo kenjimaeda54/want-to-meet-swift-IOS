@@ -58,45 +58,55 @@ struct Place {
 		return adress
 	}
 	
-static	func getRegion(_ placeMark: CLPlacemark?) -> (regionCordinate:MKCoordinateRegion?,name:String?) {
+	static func getRegion(_ placeMark: CLPlacemark?) -> (regionCoordinate: MKCoordinateRegion?,name: String?)  {
 		if let placeMark = placeMark, let coordinate = placeMark.location?.coordinate {
 			
-			//quanto maior a distancia maior fica visualizacao do mapa
-			let regionCordinate = MKCoordinateRegion(center: coordinate, latitudinalMeters: 2500, longitudinalMeters: 2500)
+			//quanto maior o latitudinalMeters,longitudinalMeters maior
+			//mapa fica para cliente
+			let regionCoordinate = MKCoordinateRegion(center: coordinate, latitudinalMeters: 2500, longitudinalMeters: 2500)
 			let name = placeMark.name
-			return (regionCordinate,name)
+			
+			return (regionCoordinate,name)
 		}
-		
 		return (nil,nil)
 	}
 	
-static	func showMessage(typeMessage type:PlaceFinderMessageType, viewControler: UIViewController) {
+	static func showMessage(with type: PlaceFinderMessageType,view viewAlert: UIViewController) {
 		var title: String
 		var message: String
-		var hasConfirmation: Bool = false
+		var hasConfirm = false
 		
 		switch type {
 		case .name(let name):
-			title = "Find location"
+			title = "Found location"
 			message = "You would like add \(name)"
-			hasConfirmation = true
+			hasConfirm = true
 		case .error(let error):
 			title = "Error"
 			message = error
-			
 		}
 		
 		let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-		let cancel = UIAlertAction(title: "Cancel", style: .cancel)
+		let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
 		alert.addAction(cancel)
 		
-		if hasConfirmation {
+		if hasConfirm {
 			let confirm = UIAlertAction(title: "Confirm", style: .default) { (action) in
 				print("ok")
 			}
 			alert.addAction(confirm)
 		}
-		viewControler.present(alert, animated: true,completion: nil)
+		
+		viewAlert.present(alert, animated: true, completion: nil)
+		
+	}
+	
+	static func getLocationByTap(gesture: UIGestureRecognizer,where view:  MKMapView) -> CLLocation {
+		//pego as posicoes x e y da view que foi tocada
+		let point = gesture.location(in: view)
+		let coordinate =  view.convert(point, toCoordinateFrom: view)
+		let location = CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude)
+    return location
 	}
 	
 }
