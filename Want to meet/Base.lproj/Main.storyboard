@@ -12,27 +12,27 @@
         <!--Want to meet-->
         <scene sceneID="RUL-MG-KlQ">
             <objects>
-                <tableViewController id="2L8-4Q-VK6" sceneMemberID="viewController">
+                <tableViewController id="2L8-4Q-VK6" customClass="PlaceTableViewController" customModule="Want_to_meet" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="boi-C2-46s">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" id="kk0-j4-aqF" customClass="PlaceTableViewCell" customModule="Want_to_meet" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44.5" width="414" height="44.5"/>
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="82.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kk0-j4-aqF" id="A3H-jb-nyP">
-                                    <rect key="frame" x="0.0" y="0.0" width="385.5" height="44.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="385.5" height="82.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n4N-E5-bVX">
-                                            <rect key="frame" x="152" y="10.5" width="37" height="23.5"/>
+                                            <rect key="frame" x="152" y="10.5" width="37" height="61.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cellIcon" translatesAutoresizingMaskIntoConstraints="NO" id="GgY-NE-82o">
-                                            <rect key="frame" x="20" y="2" width="122" height="40.5"/>
+                                            <rect key="frame" x="20" y="21" width="122" height="40.5"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="122" id="9Yd-3D-weT"/>
                                             </constraints>
@@ -40,7 +40,7 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="n4N-E5-bVX" firstAttribute="leading" secondItem="GgY-NE-82o" secondAttribute="trailing" constant="10" id="4wa-U1-mc8"/>
-                                        <constraint firstItem="GgY-NE-82o" firstAttribute="top" secondItem="A3H-jb-nyP" secondAttribute="topMargin" constant="-9" id="53O-tj-uUQ"/>
+                                        <constraint firstItem="GgY-NE-82o" firstAttribute="top" secondItem="A3H-jb-nyP" secondAttribute="topMargin" constant="10" id="53O-tj-uUQ"/>
                                         <constraint firstItem="n4N-E5-bVX" firstAttribute="centerY" secondItem="A3H-jb-nyP" secondAttribute="centerY" id="H8q-51-U19"/>
                                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="n4N-E5-bVX" secondAttribute="trailing" constant="20" symbolic="YES" id="W7C-zo-AUg"/>
                                         <constraint firstItem="GgY-NE-82o" firstAttribute="leading" secondItem="A3H-jb-nyP" secondAttribute="leadingMargin" id="fQe-ma-ILW"/>
@@ -61,13 +61,13 @@
                     <navigationItem key="navigationItem" title="Want to meet" id="8vR-j0-DAA">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="2hH-7l-MgG">
                             <connections>
-                                <segue destination="k2c-ZK-ZdT" kind="presentation" modalPresentationStyle="overFullScreen" modalTransitionStyle="crossDissolve" id="LQP-Hz-Kgq"/>
+                                <segue destination="k2c-ZK-ZdT" kind="presentation" identifier="modalSegue" modalPresentationStyle="overFullScreen" modalTransitionStyle="crossDissolve" id="LQP-Hz-Kgq"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <segue destination="Qqs-EQ-fT6" kind="show" identifier="FoundPlaceSegue" id="jSO-6w-FSg"/>
+                        <segue destination="Qqs-EQ-fT6" kind="show" identifier="foundPlaceSegue" id="coo-X6-R9k"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MOo-Zf-uvE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -77,7 +77,7 @@
         <!--Title-->
         <scene sceneID="pJU-Eg-nj4">
             <objects>
-                <viewController id="Qqs-EQ-fT6" sceneMemberID="viewController">
+                <viewController id="Qqs-EQ-fT6" customClass="MapViewController" customModule="Want_to_meet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Oe6-Kl-kDD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -123,6 +123,9 @@
                                                 <buttonConfiguration key="configuration" style="plain" title="Trace the route">
                                                     <fontDescription key="titleFontDescription" type="system" weight="light" pointSize="21"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="handleTraceRote:" destination="Qqs-EQ-fT6" eventType="touchUpInside" id="Qbf-eD-yyn"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -140,21 +143,36 @@
                                     </view>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8VS-VH-UXE">
+                                <rect key="frame" x="348.5" y="17" width="45.5" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="magnifyingglass" catalog="system"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hoZ-fe-ivx"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="8VS-VH-UXE" secondAttribute="trailing" constant="20" id="2qg-yt-tgW"/>
                             <constraint firstItem="hZh-m1-cdo" firstAttribute="leading" secondItem="hoZ-fe-ivx" secondAttribute="leading" id="3CH-9D-szS"/>
                             <constraint firstItem="hoZ-fe-ivx" firstAttribute="bottom" secondItem="fV8-8Q-9pD" secondAttribute="bottom" id="927-IF-QL7"/>
                             <constraint firstItem="hZh-m1-cdo" firstAttribute="top" secondItem="hoZ-fe-ivx" secondAttribute="top" id="DbB-uP-wmZ"/>
                             <constraint firstItem="hoZ-fe-ivx" firstAttribute="trailing" secondItem="hZh-m1-cdo" secondAttribute="trailing" id="Jta-bM-AXs"/>
+                            <constraint firstItem="8VS-VH-UXE" firstAttribute="top" secondItem="Oe6-Kl-kDD" secondAttribute="top" constant="17" id="MQu-rZ-rf0"/>
                             <constraint firstAttribute="bottom" secondItem="hZh-m1-cdo" secondAttribute="bottom" id="O6C-dQ-glM"/>
                             <constraint firstItem="fV8-8Q-9pD" firstAttribute="leading" secondItem="Oe6-Kl-kDD" secondAttribute="leading" constant="10" id="hkY-Hh-TOI"/>
                             <constraint firstItem="hoZ-fe-ivx" firstAttribute="trailing" secondItem="fV8-8Q-9pD" secondAttribute="trailing" constant="10" id="if1-Kt-g1b"/>
                             <constraint firstItem="fV8-8Q-9pD" firstAttribute="top" secondItem="hoZ-fe-ivx" secondAttribute="top" id="ki9-5s-7Mz"/>
+                            <constraint firstItem="8VS-VH-UXE" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Oe6-Kl-kDD" secondAttribute="leading" constant="20" symbolic="YES" id="qBc-nv-fZl"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="Gz1-Em-b8W"/>
+                    <connections>
+                        <outlet property="labAddress" destination="WiQ-6h-DER" id="lWy-Yw-1e9"/>
+                        <outlet property="labName" destination="ZRi-5f-qwB" id="eol-EP-v7t"/>
+                        <outlet property="mapView" destination="gzT-ae-SU7" id="eM1-yv-EBS"/>
+                        <outlet property="searchBar" destination="f7v-PB-aca" id="JQu-0z-dLk"/>
+                        <outlet property="vwInfo" destination="qgh-wJ-iLz" id="1pL-wm-nBA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CQP-AS-1TV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -316,6 +334,7 @@ for 2 seconds on the map</string>
     <resources>
         <image name="cancel" width="30" height="30"/>
         <image name="cellIcon" width="40" height="40"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <namedColor name="main">
             <color red="0.0040000006556510925" green="0.71799999475479126" blue="0.88999998569488525" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
