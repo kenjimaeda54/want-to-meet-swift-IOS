@@ -143,32 +143,37 @@
                                     </view>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8VS-VH-UXE">
-                                <rect key="frame" x="348.5" y="17" width="45.5" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="magnifyingglass" catalog="system"/>
-                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="aOI-CL-Zvv">
+                                <rect key="frame" x="188.5" y="392" width="37" height="37"/>
+                                <color key="color" systemColor="secondarySystemFillColor"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hoZ-fe-ivx"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="8VS-VH-UXE" secondAttribute="trailing" constant="20" id="2qg-yt-tgW"/>
                             <constraint firstItem="hZh-m1-cdo" firstAttribute="leading" secondItem="hoZ-fe-ivx" secondAttribute="leading" id="3CH-9D-szS"/>
+                            <constraint firstItem="aOI-CL-Zvv" firstAttribute="centerY" secondItem="gzT-ae-SU7" secondAttribute="centerY" id="7kz-Bd-uIK"/>
                             <constraint firstItem="hoZ-fe-ivx" firstAttribute="bottom" secondItem="fV8-8Q-9pD" secondAttribute="bottom" id="927-IF-QL7"/>
                             <constraint firstItem="hZh-m1-cdo" firstAttribute="top" secondItem="hoZ-fe-ivx" secondAttribute="top" id="DbB-uP-wmZ"/>
                             <constraint firstItem="hoZ-fe-ivx" firstAttribute="trailing" secondItem="hZh-m1-cdo" secondAttribute="trailing" id="Jta-bM-AXs"/>
-                            <constraint firstItem="8VS-VH-UXE" firstAttribute="top" secondItem="Oe6-Kl-kDD" secondAttribute="top" constant="17" id="MQu-rZ-rf0"/>
                             <constraint firstAttribute="bottom" secondItem="hZh-m1-cdo" secondAttribute="bottom" id="O6C-dQ-glM"/>
+                            <constraint firstItem="aOI-CL-Zvv" firstAttribute="centerX" secondItem="gzT-ae-SU7" secondAttribute="centerX" id="bsi-Pc-n1J"/>
                             <constraint firstItem="fV8-8Q-9pD" firstAttribute="leading" secondItem="Oe6-Kl-kDD" secondAttribute="leading" constant="10" id="hkY-Hh-TOI"/>
                             <constraint firstItem="hoZ-fe-ivx" firstAttribute="trailing" secondItem="fV8-8Q-9pD" secondAttribute="trailing" constant="10" id="if1-Kt-g1b"/>
                             <constraint firstItem="fV8-8Q-9pD" firstAttribute="top" secondItem="hoZ-fe-ivx" secondAttribute="top" id="ki9-5s-7Mz"/>
-                            <constraint firstItem="8VS-VH-UXE" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Oe6-Kl-kDD" secondAttribute="leading" constant="20" symbolic="YES" id="qBc-nv-fZl"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="Gz1-Em-b8W"/>
+                    <navigationItem key="navigationItem" title="Title" id="Gz1-Em-b8W">
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="IBI-1n-nHr">
+                            <connections>
+                                <action selector="showSearchBar:" destination="Qqs-EQ-fT6" id="jMM-GG-JQG"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="labAddress" destination="WiQ-6h-DER" id="lWy-Yw-1e9"/>
                         <outlet property="labName" destination="ZRi-5f-qwB" id="eol-EP-v7t"/>
+                        <outlet property="loading" destination="aOI-CL-Zvv" id="MYe-4d-Sh3"/>
                         <outlet property="mapView" destination="gzT-ae-SU7" id="eM1-yv-EBS"/>
                         <outlet property="searchBar" destination="f7v-PB-aca" id="JQu-0z-dLk"/>
                         <outlet property="vwInfo" destination="qgh-wJ-iLz" id="1pL-wm-nBA"/>
@@ -334,12 +339,14 @@ for 2 seconds on the map</string>
     <resources>
         <image name="cancel" width="30" height="30"/>
         <image name="cellIcon" width="40" height="40"/>
-        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <namedColor name="main">
             <color red="0.0040000006556510925" green="0.71799999475479126" blue="0.88999998569488525" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="secondarySystemFillColor">
+            <color red="0.47058823529411764" green="0.47058823529411764" blue="0.50196078431372548" alpha="0.16" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
