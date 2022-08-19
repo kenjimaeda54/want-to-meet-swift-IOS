@@ -15,7 +15,7 @@ Continuar aprendendo desenvolvimento em swift para IOS
 - No sender temos acesso os dados enviados pelo método performSegue
 
 
-```swfit
+``` swfit
 	
 //quando uma linha e selecionado na table view
 override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -66,7 +66,7 @@ if segue.identifier == "modalSegue" {
 
 
 
-```swift
+``` swift
 
 
 override func viewDidLoad() {
@@ -107,22 +107,23 @@ override func viewDidLoad() {
 
 
 
-```swift
-	func	showRegion(placeMark: CLPlacemark,with mpView: MKMapView) -> (latitude: CLLocationDegrees,longitude: CLLocationDegrees,name: String)  {
+``` swift
+	
+ func	showRegion(placeMark: CLPlacemark,with mpView: MKMapView) -> (latitude: CLLocationDegrees,longitude: CLLocationDegrees,name: String)  {
 		
-		if 	let coordiante2D = placeMark.location?.coordinate,let name = placeMark.name{
+   if 	let coordiante2D = placeMark.location?.coordinate,let name = placeMark.name{
 			
-			//quanto maior o latitudinalMeters,longitudinalMeters maior
-			//mapa fica para cliente
-			//mostrar a regiao no mapa
-			let region = MKCoordinateRegion(center: coordiante2D, latitudinalMeters: 2500, longitudinalMeters: 2500)
-			mpView.setRegion(region, animated: true)
-			let latitude = mpView.region.center.latitude
-			let longitude = mpView.region.center.longitude
-			return (latitude,longitude,name)
-		}
-		return (0.0,0.0,"Unknown")
+	//quanto maior o latitudinalMeters,longitudinalMeters maior
+        //mapa fica para cliente
+	//mostrar a regiao no mapa
+	let region = MKCoordinateRegion(center: coordiante2D, latitudinalMeters: 2500, longitudinalMeters: 2500)
+	mpView.setRegion(region, animated: true)
+	let latitude = mpView.region.center.latitude
+	let longitude = mpView.region.center.longitude
+	return (latitude,longitude,name)
 	}
+	return (0.0,0.0,"Unknown")
+}
 
 ```
 
@@ -143,7 +144,7 @@ override func viewDidLoad() {
 
 
  //padrao
-	    	func addPin(_ place: Place)  {
+  func addPin(_ place: Place)  {
 	  		let anotation = MKPointAnnotation()
 	  		anotation.title = place.name
 	  		anotation.coordinate = place.coordinates
@@ -176,7 +177,7 @@ override func viewDidLoad() {
 
 
 
-```swift
+``` swift
 
  	func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
 		loading.startAnimating()
@@ -225,7 +226,7 @@ override func viewDidLoad() {
 
 
 
-```swift
+``` swift
 
 	//quando tocar em uma annotation
 	func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
@@ -253,7 +254,7 @@ override func viewDidLoad() {
 
 
 
-```swift
+``` swift
 
 	var buttonLocation = MKUserTrackingButton()
   
@@ -275,7 +276,7 @@ override func viewDidLoad() {
 - E implementar o delgate  locationManager, neste método que a mágica acontece
 
 
-```swift
+``` swift
 
 	//aqui estou verificando os recursos de localizacao
 	func requestLocationUser() {
