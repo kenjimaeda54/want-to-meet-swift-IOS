@@ -148,7 +148,7 @@ class MapViewController: UIViewController {
 						//assim so tenho a localizacao do usuario
 						var annotations = mapView.annotations.filter({!($0 is PlaceAnnotation)})
 						//dessa forma aqui so vou ter localizacao do usuario
-						//mais a selecinado em selectedAnotation
+						//mais a annotation selecionada como rota 
 						annotations.append(selectedAnotation!)
 						mapView.showAnnotations(annotations, animated: true)
 						
@@ -159,7 +159,7 @@ class MapViewController: UIViewController {
 					print(error)
 				}
 			}
-	
+			
 		}
 		
 	}
