@@ -1,9 +1,8 @@
 #  Want to meet 
-Aplicativo com localizacao do usuario,tracagem de rotas  e pontos de interesse
+Aplicativo com localização do usuário, tracagem de rotas  e pontos de interesse
 
-
-## Motivacao
-Continuar aprendnedo desenvolvimento em swift para IOS
+## Motivação
+Continuar aprendendo desenvolvimento em swift para IOS
 
 
 ## Feature
