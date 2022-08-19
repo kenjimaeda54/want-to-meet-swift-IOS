@@ -15,7 +15,7 @@ Continuar aprendendo desenvolvimento em swift para IOS
 - No sender temos acesso os dados enviados pelo método performSegue
 
 
-``` swfit
+``` swift
 	
 //quando uma linha e selecionado na table view
 override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
